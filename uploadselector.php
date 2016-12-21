@@ -19,8 +19,7 @@
     }
 
     if(empty($errors)==true){
-      move_uploaded_file($file_tmp,"/afs/cad.njit.edu/u/t/n/tn64/public_html/final/imgs/".$file_name);
-
+      move_uploaded_file($file_tmp,"/afs/cad.njit.edu/u/t/n/tn64/public_html/final/imgs/users/".$file_name);
       	header('Location: memberpage.php');
         echo "Successly changed profile pic!";
     }else{
