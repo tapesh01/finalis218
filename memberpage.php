@@ -30,7 +30,7 @@ require('layout/header.php');
             }
            ?>
         </div>
-        <center><label class="form-group">Update Your Profile Picture!</label></td></center>
+        <center><a href="upload.php">click here to change your Profile Picture!></center>
       </center>
 		</div>
 	</div>
