@@ -13,7 +13,7 @@ class User extends Password{
 	private function get_user_hash($username){
 
 		try {
-			$stmt = $this->_db->prepare('SELECT password, username, memberID FROM members WHERE username = :username AND active="Yes" ');
+			$stmt = $this->_db->prepare('SELECT password, username, memberID, userpic FROM members WHERE username = :username AND active="Yes" ');
 			$stmt->execute(array('username' => $username));
 
 			return $stmt->fetch();
@@ -26,13 +26,13 @@ class User extends Password{
 	public function login($username,$password){
 
 		$row = $this->get_user_hash($username);
-
+  
 		if($this->password_verify($password,$row['password']) == 1){
 
 		    $_SESSION['loggedin'] = true;
 		    $_SESSION['username'] = $row['username'];
 		    $_SESSION['memberID'] = $row['memberID'];
-      //  $_SESSION['userpic'] = $row['userpic'];
+        $_SESSION['userpic'] = $row['userpic'];
 		    return true;
 		}
 	}

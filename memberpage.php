@@ -20,15 +20,21 @@ require('layout/header.php');
 <div class="container"> <!container div>
 
 	<div class="row">  <!row div>
+    <hr>
 			<center><h2>Welcome to the Community: <?php echo $_SESSION['username']; ?></h2></center>
 
-				<hr>
-
+        <center><div class="input-group">
+          <?php
+            if (isset($_SESSION['userpic'])){
+              echo '<img src="'.$_SESSION['userpic'].'" alt="'.$_SESSION['username'].'" />';
+            }
+           ?>
+        </div>
+        <center><label class="form-group">Update Your Profile Picture!</label></td></center>
+      </center>
 		</div>
 	</div>
 
-
-</div>
 
 <?php
 //include header template
