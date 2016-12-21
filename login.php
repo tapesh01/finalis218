@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
-//if the db can find the user create a session and imply header and exit session
+//if the db can find the user and create a session and imply header and exit session
 	if($user->login($username,$password)){
 		$_SESSION['username'] = $username;
 		header('Location: memberpage.php');
@@ -43,7 +43,7 @@ require('layout/header.php');
 <div class="container">     <!create container>
 
 	<div class="row">    <!create row>
-
+		<form role="form" method="post" action="" autocomplete="off">
 				<center><h2>Please Login</h2> <!center header>
 				<p><a href='./'>Back to home page</a></p>
 				<hr>
@@ -92,7 +92,7 @@ require('layout/header.php');
 
 				<hr>
 				<div class="row">
-					<center><input type="submit" name="submit" value="Login" class="btn btn-primary btn-block btn-lg" tabindex="5"></div><center>
+					<center><input type="submit" name="submit" value="Login" class="btn btn-primary btn-block btn-lg" tabindex="5"></div></center>
 				</div>
 			</form>
 		</div>

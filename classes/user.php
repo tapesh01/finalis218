@@ -32,6 +32,7 @@ class User extends Password{
 		    $_SESSION['loggedin'] = true;
 		    $_SESSION['username'] = $row['username'];
 		    $_SESSION['memberID'] = $row['memberID'];
+      //  $_SESSION['userpic'] = $row['userpic'];
 		    return true;
 		}
 	}

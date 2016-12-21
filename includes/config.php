@@ -12,7 +12,7 @@ define('DBPASS','heaven47');
 define('DBNAME','tn64');
 
 //application address
-define('DIR','http://web.njit.edu/~tn64/final3/');
+define('DIR','http://web.njit.edu/~tn64/final/');
 define('SITEEMAIL','tn64@njit.edu');
 
 try {
